@@ -1,0 +1,33 @@
+{
+  "name": "task",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "start": "rm -rf ./dist && npm run tsc && node ./dist/server.js",
+    "test": "rm -rf ./dist && export MONGO_URL=mongodb://localhost:27019/user-hobbies-test && npm run tsc && mocha ./dist/test/*.test.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@types/chai-http": "^4.2.0",
+    "@types/z-schema": "^3.16.32",
+    "body-parser": "^1.19.0",
+    "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.0",
+    "mongodb": "^3.2.5",
+    "mongoose": "^5.5.11",
+    "typescript": "^3.4.5",
+    "z-schema": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/chai": "^4.1.7",
+    "@types/express": "^4.16.1",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^12.0.2",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  }
+}

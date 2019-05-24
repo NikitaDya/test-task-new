@@ -1,0 +1,9 @@
+.t-header td{
+  padding: 0px 5px !important;
+}
+section {
+  display: block !important;
+  width: 100%;
+  height: 350px !important;
+  overflow-y: scroll;
+}

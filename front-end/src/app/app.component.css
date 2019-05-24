@@ -1,0 +1,31 @@
+.table{
+  margin-top: 100px;
+}
+.row {
+  padding: 0 10px;
+}
+.row .m3 {
+  padding: 0px;
+}
+.user-list li {
+  cursor: pointer;
+}
+.user-list ul {
+  padding: 1px;
+}
+.table-header{
+  padding: 10px;
+  border-bottom: 2px solid #909090;
+}
+.table-header p{
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.user-list{
+  max-height: 400px;
+  border-right: 2px solid #909090;
+}
+.t-header td{
+  padding: 0px 5px !important;
+}

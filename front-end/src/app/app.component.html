@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="table white z-depth-2">
+    <div class="row">
+      <div class="table-header">
+        <p>User hobbies</p>
+      </div>
+      <div class="user-list col m3 s12">
+        <app-users [Users]="Users" (AddUser)="addUser($event)" [selectedId]="SelectedUser" (SelectUser)="selectUser($event)"></app-users>
+      </div>
+      <div class="hobbies-table col m9 s12">
+        <app-hobbies [Hobbies]="Hobbies" (AddHobby)="addHobby($event)" (DeleteHobby)="deleteHobby($event)"></app-hobbies>
+      </div>
+    </div>
+  </div>
+</div>

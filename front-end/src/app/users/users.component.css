@@ -1,0 +1,14 @@
+.collection-item {
+  cursor: pointer;
+}
+.collection-item.active {
+  background-color: #f9f9f9;
+  color: #383838;
+}
+.user-list{
+  border-right: 2px solid #909090;
+}
+.scroll{
+  height: 250px;
+  overflow-y: scroll;
+}

@@ -1,0 +1,21 @@
+<form (ngSubmit)="addUser(user_name.value); $event.preventDefault()">
+  <mz-input-container [inline]="true">
+    <input mz-input
+           placeholder="Name"
+           length=""
+           #user_name
+           class="inline"
+           type="text">
+  </mz-input-container>
+  <button class="btn btn-flat inline">Add</button>
+</form>
+<ul class="collection scroll" *ngIf="Users && Users.length > 0">
+  <li
+    class="collection-item"
+    *ngFor="let user of Users; let i = index"
+    (click)="selectUser(user._id, i)"
+    [class.active]="selectedId === user._id"
+  >
+    {{user.name}}
+  </li>
+</ul>

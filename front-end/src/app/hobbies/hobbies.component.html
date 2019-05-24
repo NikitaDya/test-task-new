@@ -1,0 +1,61 @@
+<section class="hobbies">
+  <table class="responsive-table">
+    <thead class="t-header">
+    <td>
+      <mz-select-container>
+        <select mz-select
+                id="options-select"
+                #passion
+                [placeholder]="'Select passion level'"
+        >
+          <option [value]="'Very_High'">Very High</option>
+          <option [value]="'High'">High</option>
+          <option [value]="'Medium'">Medium</option>
+          <option [value]="'Low'">Low</option>
+        </select>
+      </mz-select-container>
+    </td>
+    <td>
+      <mz-input-container >
+        <input mz-input
+               placeholder="Enter user hobby"
+               length=""
+               #hobby
+               class="inline"
+               type="text">
+      </mz-input-container>
+    </td>
+    <td>
+      <mz-input-container >
+        <input mz-input
+               placeholder="Enter year"
+               length=""
+               #year
+               class="inline"
+               type="number">
+      </mz-input-container>
+    </td>
+    <td>
+      <button class="btn btn-flat inline"
+              [disabled]="passion.value === null || year.value === null || hobby.value.length === 0"
+              (click)="addHobby({passionLevel: passion.value, year: year.value, name: hobby.value})">
+        Add
+      </button>
+    </td>
+    </thead>
+    <ng-container *ngIf="Hobbies">
+      <tr  *ngFor="let hobby of Hobbies">
+        <td>{{hobby.passionLevel}}</td>
+        <td>{{hobby.name}}</td>
+        <td>since {{hobby.year}}</td>
+        <td>
+          <button class="btn red" (click)="deleteHobby(hobby._id)">
+            <i class="material-icons">delete</i>
+          </button>
+        </td>
+      </tr>
+    </ng-container>
+
+  </table>
+</section>
+
